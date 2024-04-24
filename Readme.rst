@@ -140,11 +140,24 @@ Fix panel PIXEL Environment
 ***************************
 
 - Open explorer, then enable option to show hidden files
-- Locate folder in (/root or /home/"user")/.config directory, delete lxpanel folder and reboot
-- Run this command and reboot:
-``
-sudo apt-get remove pulseaudio
-``
+- Locate folder in ``(/root or /home/"user")`` /.config directory, delete lxpanel folder and reboot
+
+Run this command and reboot::
+
+	sudo apt-get remove pulseaudio
+
+
+Add package manager Pi-Apps
+***************************
+
+Installing Pi-Apps is as simple as runing this one command in a terminal::
+
+	wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+
+To install manually if you prefer to see what happens under the hood::
+
+	git clone https://github.com/Botspot/pi-apps && ~/pi-apps/install
+
 
 Kernel upgrade
 **************
