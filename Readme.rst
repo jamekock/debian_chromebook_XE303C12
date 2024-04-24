@@ -143,7 +143,7 @@ The same script can be used to update the kernel and the modules on the emmc dri
 
 - Open explorer, then enable option to show hidden files
 - Locate folder in (/root or /home/"user")/.config directory, delete lxpanel folder and reboot
-- Run this command and reboot: 
+- Run this command and reboot 
 
 ::
 
