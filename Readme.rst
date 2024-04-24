@@ -135,6 +135,19 @@ Run the provided PIXEL installation script::
 
 Wait for the installation to finish and `poweroff` before jumping in your prefered desktop (with power-on and ctrl-d).
 
+
+Fix panel PIXEL Environment
+***************************
+
+The same script can be used to update the kernel and the modules on the emmc drive.
+
+- Open explorer, then enable option to show hidden files
+- Locate folder in (/root or /home/"user")/.config directory, delete lxpanel folder and reboot
+- Run this command and reboot: ::
+
+sudo apt-get remove pulseaudio 
+
+
 Kernel upgrade
 **************
 
