@@ -105,8 +105,8 @@ Once done, shutdown the machine with `poweroff`. Do not `reboot` or you will get
 
 Have fun!
 
-Installing XFCE
-***************
+Installing Desktop Environment
+******************************
 
 Start the machine and hit ctrl-d to boot on the emmc (or ctrl-u if you want to test on a USB key first) and log as root:
 
@@ -120,6 +120,11 @@ Setup a network connection:
 Run the provided XFCE installation script::
 
 	./xfce_install.sh
+
+
+Run the provided PIXEL installation script::
+
+	./pixel_install.sh
 
 Wait for the installation to finish and `poweroff` before jumping in your prefered desktop (with power-on and ctrl-d).
 
