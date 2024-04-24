@@ -76,7 +76,7 @@ USB stick preparation (on a Linux host)
 - Download the latest zip archive from the [releases page](https://github.com/13pgeiser/debian_chromebook_XE303C12/releases) and unpack it.
 - Open a terminal in the extracted folder
 - plug a USB key to hold the debian installation image
-- run file *./sh* and select the USB key in the list.
+- run file *./sh* and select the USB key in the list.::
 
 	./install.sh
 
