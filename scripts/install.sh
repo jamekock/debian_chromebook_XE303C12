@@ -101,18 +101,18 @@ function format_device() {
 	mkfs.ext4 -F -L rootfs "${drive}3"
 	# mkfs.btrfs -O ^skinny-metadata -L rootfs ${drive}3
 	echo "Mounting ..."
-	mkdir -p /mnt/xe303c12
-	mount "${drive}3" /mnt/xe303c12 -t ext4 -o noatime
-	# mount ${drive}3 /mnt/xe303c12 -t btrfs noatime,compress=lzo,commit=0,ssd_spread,autodefrag
+	mkdir -p /tmp/xe303c12
+	mount "${drive}3" /tmp/xe303c12 -t ext4 -o noatime
+	# mount ${drive}3 /tmp/xe303c12 -t btrfs noatime,compress=lzo,commit=0,ssd_spread,autodefrag
 	echo "Unpacking ..."
-	tar -Jvxf rootfs.tar.xz -C /mnt/xe303c12/
+	tar -Jvxf rootfs.tar.xz -C /tmp/xe303c12/
 	if [ "$(echo "$1" | grep mmcblk)" == "" ]; then
 		echo "Copying archive and install script"
-		cp rootfs.tar.xz /mnt/xe303c12/root/
-		cp ./*.sh /mnt/xe303c12/root/
-		cp ./*.bin /mnt/xe303c12/root/
+		cp rootfs.tar.xz /tmp/xe303c12/root/
+		cp ./*.sh /tmp/xe303c12/root/
+		cp ./*.bin /tmp/xe303c12/root/
 	else
-		cp ./xfce_install.sh /mnt/xe303c12/root/
+		cp ./xfce_install.sh /tmp/xe303c12/root/
 	fi
 	echo "Syncing"
 	sync
