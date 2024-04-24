@@ -105,7 +105,7 @@ function format_device() {
 	mount "${drive}3" /mnt/xe303c12 -t ext4 -o noatime
 	# mount ${drive}3 /mnt/xe303c12 -t btrfs noatime,compress=lzo,commit=0,ssd_spread,autodefrag
 	echo "Unpacking ..."
-	tar xJf rootfs.tar.xz -C /mnt/xe303c12/
+	tar -Jvxf rootfs.tar.xz -C /mnt/xe303c12/
 	if [ "$(echo "$1" | grep mmcblk)" == "" ]; then
 		echo "Copying archive and install script"
 		cp rootfs.tar.xz /mnt/xe303c12/root/
@@ -137,7 +137,7 @@ else
 		if [ "$sure" != "yes" ]; then
 			stop "Stopped by the user"
 		fi
-		tar xJf rootfs.tar.xz -C / lib/modules/
+		tar -Jvxf rootfs.tar.xz -C /lib/modules/
 		dd if=kernel_emmc_ext4.bin of=/dev/mmcblk0p1
 	else
 		check_tool cgpt
