@@ -80,8 +80,9 @@ USB stick preparation (on a Linux host)
 
 	./install.sh
 
-Compatible with  shell (terminal) xe303c12
-::
+
+Compatible with  shell (terminal) xe303c12::
+
 	./install_xe303c12.sh 
 
 **BEWARE it will erase all data on the selected disk!**
