@@ -24,6 +24,9 @@ I still use the machine as a remote desktop client and I do it rarely. Do not ex
 
 **Use at your own risk!**
 
+Package manager Pi Apps: https://github.com/Botspot/pi-apps
+Botspot, theofficialgman, and contributors
+
 Introduction
 ************
 
