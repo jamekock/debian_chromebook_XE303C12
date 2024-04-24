@@ -76,9 +76,9 @@ USB stick preparation (on a Linux host)
 - Download the latest zip archive from the [releases page](https://github.com/13pgeiser/debian_chromebook_XE303C12/releases) and unpack it.
 - Open a terminal in the extracted folder
 - plug a USB key to hold the debian installation image
-- run file *./sh* and select the USB key in the list.::
+- run file ``./install.sh`` and select the USB key in the list.::
 
-	./install.sh
+	
 
 
 Compatible with  shell (terminal) xe303c12::
@@ -122,14 +122,14 @@ user: root
 passwd: toor
 
 Setup a network connection:
-`nmtui`
+``nmtui``
 
-Run the provided XFCE installation script::
+Run the provided XFCE Desktop Environment  installation script::
 
 	./xfce_install.sh
 
 
-Run the provided PIXEL installation script::
+Run the provided PIXEL, Raspbian Desktop Environment installation script::
 
 	./pixel_install.sh
 
@@ -141,8 +141,10 @@ Fix panel PIXEL Environment
 
 - Open explorer, then enable option to show hidden files
 - Locate folder in (/root or /home/"user")/.config directory, delete lxpanel folder and reboot
-- Run this command "sudo apt-get remove pulseaudio" and reboot 
-
+- Run this command and reboot:
+``
+sudo apt-get remove pulseaudio
+``
 
 Kernel upgrade
 **************
