@@ -8,11 +8,11 @@ figlet "Release: $VERSION_CODENAME"
 figlet "CPUs: $(nproc)"
 
 if [ "$VERSION_CODENAME" == "bullseye" ]; then
-	tar xJf /usr/src/linux-source-5.10.tar.xz
+	tar -Jvxf /usr/src/linux-source-5.10.tar.xz
 	cd linux-source-5.10
 
 elif [ "$VERSION_CODENAME" == "bookworm" ]; then
-	tar xJf /usr/src/linux-source-6.1.tar.xz
+	tar -Jvxf /usr/src/linux-source-6.1.tar.xz
 	cd linux-source-6.1
 else
 	echo "Unsupported"
